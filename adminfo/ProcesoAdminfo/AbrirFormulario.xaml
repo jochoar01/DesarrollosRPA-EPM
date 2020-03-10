@@ -1,0 +1,183 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ProcesoAdminfo" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="396,990" sap2010:WorkflowViewState.IdRef="ProcesoAdminfo_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="21">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="16">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="AbrirFormularioInsolvencia" sap:VirtualizedContainerService.HintSize="376,990" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="existeMantenimiento" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ImageFound DisplayName="Image Exists 'chrome.exe'" Found="[existeMantenimiento]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+      <ui:ImageFound.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+      </ui:ImageFound.Image>
+      <ui:ImageFound.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' htmlwindowname='las87kas' title='https://epm.adminfo.net/vsmart/index.php?rtr=mantenimiento&amp;amp;ctr=c*' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:ImageFound.Target>
+    </ui:ImageFound>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  irMantenimiento'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="f9011be6aeef1e806f40086d3f9996fb" Selector="&lt;html app='chrome.exe' htmlwindowname='las87kas' title='https://epm.adminfo.net/vsmart/index.php?rtr=mantenimiento&amp;amp;ctr=c*' /&gt;&lt;webctrl id='irMantenimiento' tag='A' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click BD EPM" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="7aff0ad296842b46e0797c4027073310" Selector="&lt;html app='chrome.exe' htmlwindowname='las87kas' title='SOFTWARE DE GESTION ADMINFO -- SOLUCIONES LATINAS Ltda.' /&gt;&lt;webctrl id='div2_epm10101031' tag='DIV' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click  Juridica" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="0da4731e778eb6059a03b5c415677a83" Selector="&lt;html app='chrome.exe' htmlwindowname='las87kas' title='SOFTWARE DE GESTION ADMINFO -- SOLUCIONES LATINAS Ltda.' /&gt;&lt;webctrl aaname='Jurídica' parentid='menuAcordeon' tag='A' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Estructurar proceso" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5c9e7430cc0b63c17508c2608f8e28fa" Selector="&lt;html app='chrome.exe' htmlwindowname='las87kas' title='SOFTWARE DE GESTION ADMINFO -- SOLUCIONES LATINAS Ltda.' /&gt;&lt;webctrl aaname='Estructurar Proceso de In' parentid='menuAcordeon' tag='DIV' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Click Nuevo registro" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="610ce0db4a5410105deafafa8f0f3447" Selector="&lt;html app='chrome.exe' htmlwindowname='las87kas' title='SOFTWARE DE GESTION ADMINFO -- SOLUCIONES LATINAS Ltda.' /&gt;&lt;webctrl idx='1' tag='I' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+  </Sequence>
+</Activity>
