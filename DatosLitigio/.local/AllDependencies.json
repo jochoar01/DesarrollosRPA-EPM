@@ -1610,9 +1610,9 @@
     "restore": {
       "projectUniqueName": "DatosLitigio",
       "projectName": "DatosLitigio",
-      "projectPath": "C:\\Users\\juan.ochoa\\Documents\\UiPath\\DatosLitigio\\.local",
+      "projectPath": "C:\\Users\\juan.ochoa\\Documents\\UiPath\\DesarrollosRPA-EPM\\DatosLitigio\\.local",
       "packagesPath": "C:\\Users\\juan.ochoa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\juan.ochoa\\Documents\\UiPath\\DatosLitigio\\.local"
+      "outputPath": "C:\\Users\\juan.ochoa\\Documents\\UiPath\\DesarrollosRPA-EPM\\DatosLitigio\\.local"
     },
     "frameworks": {
       "net461": {
