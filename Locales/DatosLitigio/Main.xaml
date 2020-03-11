@@ -81,7 +81,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[row(0).ToString+vbLf+row(1).ToString+vbLf+row(2).ToString+vbLf+row(3).ToString+vbLf+row(4).ToString+vbLf+row(5).ToString]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[row(0).ToString+vbLf+row(1).ToString+vbLf+row(2).ToString+vbLf+row(3).ToString+vbLf+row(4).ToString]" />
           </Sequence>
         </ActivityAction>
       </ui:ForEachRow.Body>
