@@ -2,35 +2,29 @@
   "name": "DatosLitigio",
   "description": "Blank Process",
   "main": "Main.xaml",
-  "dependencies": {
-    "UiPath.Excel.Activities": "[2.8.0-preview]",
-    "UiPath.Mail.Activities": "[1.8.0-preview]",
-    "UiPath.System.Activities": "[19.12.0-preview]",
-    "UiPath.UIAutomation.Activities": "[19.12.0-preview]"
+"dependencies": {
+    "UiPath.Excel.Activities": "[2.6.2]",
+    "UiPath.Mail.Activities": "[1.5.0]",
+    "UiPath.System.Activities": "[18.4.2]",
+    "UiPath.UIAutomation.Activities": "[19.1.0]",
+    "UiPath.Word.Activities": "[1.3.1]"
   },
-  "webServices": [],
-  "schemaVersion": "4.0",
-  "studioVersion": "19.12.0.61",
-  "projectVersion": "1.0.0",
+  "schemaVersion": "3.2",
+  "studioVersion": "18.2",
+  "projectVersion": "1.0.6834.30415",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
-    "requiresUserInteraction": true,
-    "supportsPersistence": false,
     "excludedLoggedData": [
       "Private:*",
       "*password*"
-    ],
-    "executionType": "Workflow"
+    ]
   },
-  "designOptions": {
-    "projectProfile": "Developement",
-    "outputType": "Process",
-    "libraryOptions": {
-      "includeOriginalXaml": false,
-      "privateWorkflows": []
-    },
-    "fileInfos": []
+  "projectType": "Workflow",
+  "expressionLanguage": "VisualBasic",
+  "libraryOptions": {
+    "includeOriginalXaml": false,
+    "privateWorkflows": []
   },
-  "expressionLanguage": "VisualBasic"
+  "webServices": []
 }
