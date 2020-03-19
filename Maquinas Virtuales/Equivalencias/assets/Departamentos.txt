@@ -1,0 +1,33 @@
+antioquia|Antioquia
+atlantico|Atlántico
+bogota, d.c.|Bogotá| D.C.
+bolivar|Bolívar
+boyaca|Boyacá
+caldas|Caldas
+caqueta|Caquetá
+cauca|Cauca
+cesar|Cesar
+cordoba|Córdoba
+cundinamarca|Cundinamarca
+choco|Chocó
+huila|Huila
+la guajira|La Guajira
+magdalena|Magdalena
+meta|Meta
+nariño|Nariño
+norte de santander|Norte de Santander
+quindio|Quindio
+risaralda|Risaralda
+santander|Santander
+sucre|Sucre
+tolima|Tolima
+valle del cauca|Valle del Cauca
+arauca|Arauca
+casanare|Casanare
+putumayo|Putumayo
+archipielago de san andres, providencia y santa catalina|Archipiélago de San Andrés, Providencia y Santa Catalina
+amazonas|Amazonas
+guainia|Guainía
+guaviare|Guaviare
+vaupes|Vaupés
+vichada|Vichada
