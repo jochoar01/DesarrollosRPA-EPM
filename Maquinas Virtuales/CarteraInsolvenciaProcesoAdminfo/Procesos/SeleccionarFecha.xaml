@@ -1,0 +1,377 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SeleccionarFecha" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_strTipo_Y_Fecha" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>615,1458</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>SeleccionarFecha_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="21">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="36">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SeleccionarFecha" sap:VirtualizedContainerService.HintSize="575,1378" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Name="strIdFecha" />
+      <Variable x:TypeArguments="x:String" Name="strDia" />
+      <Variable x:TypeArguments="s:String[]" Name="vecSepararDatos" />
+      <Variable x:TypeArguments="x:String" Name="strMes" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign sap:VirtualizedContainerService.HintSize="553,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:String[]">[vecSepararDatos]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:String[]">[Split(in_strTipo_Y_Fecha.Replace("/","-"),"-")]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <If Condition="[CInt(vecSepararDatos(1))&lt;10]" sap:VirtualizedContainerService.HintSize="553,332" sap2010:WorkflowViewState.IdRef="If_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="264,184" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[strDia]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[vecSepararDatos(1).Replace("0","")]</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap:VirtualizedContainerService.HintSize="264,184" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_19">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[strDia]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[vecSepararDatos(1)]</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </If.Else>
+    </If>
+    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[vecSepararDatos(2)]" sap:VirtualizedContainerService.HintSize="553,51" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign x:Key="01" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[strMes]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">Ene</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="02" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[strMes]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">Feb</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="03" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[strMes]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">Mar</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="04" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[strMes]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">Abr</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="05" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[strMes]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">May</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="06" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[strMes]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">Jun</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="07" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_13">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[strMes]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">Jul</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="08" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[strMes]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">Ago</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="09" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_15">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[strMes]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">Sep</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="10" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_16">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[strMes]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">Oct</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="11" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_17">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[strMes]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">Nov</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="12" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_18">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[strMes]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">Dic</InArgument>
+        </Assign.Value>
+      </Assign>
+    </Switch>
+    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[vecSepararDatos(0)]" sap:VirtualizedContainerService.HintSize="553,51" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign x:Key="APERTURA" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Int32">[strIdFecha]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Int32">8</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="FIJACION" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Int32">[strIdFecha]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Int32">18</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="DESFIJACION" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Int32">[strIdFecha]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Int32">19</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="GESTION" sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Int32">[strIdFecha]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Int32">23</InArgument>
+        </Assign.Value>
+      </Assign>
+    </Switch>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'IMG'" sap:VirtualizedContainerService.HintSize="553,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="87289c4a8a57377105e2c1b3ad8489ae" Selector="&lt;html app='chrome.exe' htmlwindowname='las87kas' title='*' /&gt;&lt;webctrl parentid='*{{strIdFecha}}' tag='IMG' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT'" sap:VirtualizedContainerService.HintSize="553,134" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="[strMes]">
+      <ui:SelectItem.Items>
+        <scg:List x:TypeArguments="x:String" Capacity="16">
+          <x:String>Ene</x:String>
+          <x:String>Feb</x:String>
+          <x:String>Mar</x:String>
+          <x:String>Abr</x:String>
+          <x:String>May</x:String>
+          <x:String>Jun</x:String>
+          <x:String>Jul</x:String>
+          <x:String>Ago</x:String>
+          <x:String>Sep</x:String>
+          <x:String>Oct</x:String>
+          <x:String>Nov</x:String>
+          <x:String>Dic</x:String>
+        </scg:List>
+      </ui:SelectItem.Items>
+      <ui:SelectItem.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="d87a71f4186b5e8dc7f6259eef71588a" Selector="&lt;html app='chrome.exe' htmlwindowname='las87kas' title='SOFTWARE DE GESTION ADMINFO -- SOLUCIONES LATINAS Ltda.' /&gt;&lt;webctrl idx='1' parentid='ui-datepicker-div' tag='SELECT' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:SelectItem.Target>
+    </ui:SelectItem>
+    <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT'" sap:VirtualizedContainerService.HintSize="553,134" sap2010:WorkflowViewState.IdRef="SelectItem_2" Item="[vecSepararDatos(3)]">
+      <ui:SelectItem.Items>
+        <scg:List x:TypeArguments="x:String" Capacity="50">
+          <x:String>1950</x:String>
+          <x:String>1951</x:String>
+          <x:String>1952</x:String>
+          <x:String>1953</x:String>
+          <x:String>1954</x:String>
+          <x:String>1955</x:String>
+          <x:String>1956</x:String>
+          <x:String>1957</x:String>
+          <x:String>1958</x:String>
+          <x:String>1959</x:String>
+          <x:String>1960</x:String>
+          <x:String>1961</x:String>
+          <x:String>1962</x:String>
+          <x:String>1963</x:String>
+          <x:String>1964</x:String>
+          <x:String>1965</x:String>
+          <x:String>1966</x:String>
+          <x:String>1967</x:String>
+          <x:String>1968</x:String>
+          <x:String>1969</x:String>
+          <x:String>1970</x:String>
+          <x:String>1971</x:String>
+          <x:String>1972</x:String>
+          <x:String>1973</x:String>
+          <x:String>1974</x:String>
+          <x:String>1975</x:String>
+          <x:String>1976</x:String>
+          <x:String>1977</x:String>
+          <x:String>1978</x:String>
+          <x:String>1979</x:String>
+          <x:String>1980</x:String>
+          <x:String>1981</x:String>
+          <x:String>1982</x:String>
+          <x:String>1983</x:String>
+          <x:String>1984</x:String>
+          <x:String>1985</x:String>
+          <x:String>1986</x:String>
+          <x:String>1987</x:String>
+          <x:String>1988</x:String>
+          <x:String>1989</x:String>
+          <x:String>1990</x:String>
+          <x:String>1991</x:String>
+          <x:String>1992</x:String>
+          <x:String>1993</x:String>
+          <x:String>1994</x:String>
+          <x:String>1995</x:String>
+          <x:String>1996</x:String>
+          <x:String>1997</x:String>
+          <x:String>1998</x:String>
+          <x:String>1999</x:String>
+        </scg:List>
+      </ui:SelectItem.Items>
+      <ui:SelectItem.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="bd866b516d3a6df43789c2493f2e9587" Selector="&lt;html app='chrome.exe' htmlwindowname='las87kas' title='SOFTWARE DE GESTION ADMINFO -- SOLUCIONES LATINAS Ltda.' /&gt;&lt;webctrl idx='2' parentid='ui-datepicker-div' tag='SELECT' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:SelectItem.Target>
+    </ui:SelectItem>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  #'" sap:VirtualizedContainerService.HintSize="553,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="61bf3726ed6c578d7a8041105de1abe0" Selector="&lt;html app='chrome.exe' htmlwindowname='las87kas' title='SOFTWARE DE GESTION ADMINFO -- SOLUCIONES LATINAS Ltda.' /&gt;&lt;webctrl aaname='{{strDia}}' parentid='ui-datepicker-div' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+  </Sequence>
+</Activity>
