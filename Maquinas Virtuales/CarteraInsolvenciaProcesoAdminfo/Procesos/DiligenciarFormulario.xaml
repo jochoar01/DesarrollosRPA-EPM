@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>480,2488</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>518,3321</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>DiligenciarFormulario_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="42">
@@ -62,15 +62,15 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DiligenciarFormulario" sap:VirtualizedContainerService.HintSize="440,2408" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="DiligenciarFormulario" sap:VirtualizedContainerService.HintSize="478,3241" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,2284" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="456,3117" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="DiligenciarFormulario" sap:VirtualizedContainerService.HintSize="438,2231" sap2010:WorkflowViewState.IdRef="Sequence_19">
+        <Sequence DisplayName="DiligenciarFormulario" sap:VirtualizedContainerService.HintSize="438,2890" sap2010:WorkflowViewState.IdRef="Sequence_19">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -128,21 +128,21 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:TypeInto>
-          <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName=" '(2)INPUT  CONTACTO'" EmptyField="False" sap:VirtualizedContainerService.HintSize="416,51" sap2010:WorkflowViewState.IdRef="TypeInto_28" SendWindowMessages="False" SimulateType="True" Text="[in_dtrTransactionItem(&quot;Representante Legal&quot;).ToString]">
+          <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName=" '(2)INPUT  CONTACTO'" EmptyField="False" sap:VirtualizedContainerService.HintSize="416,134" sap2010:WorkflowViewState.IdRef="TypeInto_28" SendWindowMessages="False" SimulateType="True" Text="[in_dtrTransactionItem(&quot;Representante Legal&quot;).ToString]">
             <ui:TypeInto.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="b51724999d0a20a4904ada177335c70b" Selector="&lt;html app='chrome.exe' htmlwindowname='las87kas' title='SOFTWARE DE GESTION ADMINFO -- SOLUCIONES LATINAS Ltda.' /&gt;&lt;webctrl id='cliente_contacto' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
             </ui:TypeInto.Target>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:TypeInto>
-          <Sequence DisplayName="(3)TypeTipoDocumento" sap:VirtualizedContainerService.HintSize="416,51" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence DisplayName="(3)TypeTipoDocumento" sap:VirtualizedContainerService.HintSize="416,627" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
@@ -161,7 +161,7 @@
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='chrome.exe' htmlwindowname='las87kas' title='SOFTWARE DE GESTION ADMINFO -- SOLUCIONES LATINAS Ltda.' /&gt;&lt;webctrl parentid='s2id_tipo_nit' tag='B' /&gt;" WaitForReady="INTERACTIVE" />
               </ui:Click.Target>
             </ui:Click>
-            <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into TipoDocumento" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,96" sap2010:WorkflowViewState.IdRef="TypeInto_16" SendWindowMessages="False" SimulateType="True" Text="Nit">
+            <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into TipoDocumento" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,96" sap2010:WorkflowViewState.IdRef="TypeInto_16" SendWindowMessages="False" SimulateType="True" Text="[in_dtrTransactionItem(&quot;Tipo Documento&quot;).ToString]">
               <ui:TypeInto.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='chrome.exe' htmlwindowname='las87kas' title='SOFTWARE DE GESTION ADMINFO -- SOLUCIONES LATINAS Ltda.' /&gt;&lt;webctrl parentid='select2-drop' tag='INPUT' type='text' /&gt;" WaitForReady="INTERACTIVE" />
               </ui:TypeInto.Target>
