@@ -1090,15 +1090,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jacostri\\.nuget\\packages\\": {}
+    "C:\\Users\\thanos\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "CarteraInsolvenciaAdminfo",
       "projectName": "CarteraInsolvenciaAdminfo",
-      "projectPath": "C:\\Users\\jacostri\\Downloads\\DesarrollosRPA-EPM-master\\DesarrollosRPA-EPM-master\\Maquinas Virtuales\\CarteraInsolvenciaProcesoAdminfo\\.local",
-      "packagesPath": "C:\\Users\\jacostri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jacostri\\Downloads\\DesarrollosRPA-EPM-master\\DesarrollosRPA-EPM-master\\Maquinas Virtuales\\CarteraInsolvenciaProcesoAdminfo\\.local"
+      "projectPath": "C:\\Users\\thanos\\Desktop\\CarteraInsolvenciaProcesoAdminfo\\.local",
+      "packagesPath": "C:\\Users\\thanos\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\thanos\\Desktop\\CarteraInsolvenciaProcesoAdminfo\\.local"
     },
     "frameworks": {
       "net461": {

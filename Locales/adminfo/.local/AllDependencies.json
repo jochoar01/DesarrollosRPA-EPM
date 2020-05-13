@@ -1610,9 +1610,9 @@
     "restore": {
       "projectUniqueName": "adminfo",
       "projectName": "adminfo",
-      "projectPath": "C:\\Users\\juan.ochoa\\Documents\\UiPath\\adminfo\\.local",
+      "projectPath": "C:\\Users\\juan.ochoa\\Documents\\UiPath\\DesarrollosRPA-EPM\\Locales\\adminfo\\.local",
       "packagesPath": "C:\\Users\\juan.ochoa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\juan.ochoa\\Documents\\UiPath\\adminfo\\.local"
+      "outputPath": "C:\\Users\\juan.ochoa\\Documents\\UiPath\\DesarrollosRPA-EPM\\Locales\\adminfo\\.local"
     },
     "frameworks": {
       "net461": {
